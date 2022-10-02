@@ -1,0 +1,47 @@
+{%extends "base.html"%}
+
+{%block content%}
+
+<body style="background-color:grey">
+ 
+       
+      
+      <div class="row row-cols-1 row-cols-md-2 g-4">
+        
+        <div class="col">
+          <div class="card">
+            <img src="{{ url_for('static', filename='uploads/'+user[5]) }}" width="40%" >
+            
+            <div class="card-body">
+              <h5 class="card-title"> Player : {{user[1]}}  </h5>
+              <p class="card-text">  Balance : {{user[3]}}</p> 
+            </div>
+          </div>
+        </div>  
+
+        <div class="col">
+          <div class="card">
+
+            <form action = "/bet50" method='POST'>
+              Enter Bet <input type="text"  name="bet">
+              <input type = "submit" value = "Play"> <br><br>
+
+          </form>
+
+
+            <div class="card-body">
+              <img src="{{ url_for('static', filename='images/giphy.gif') }}" class="card-img-top" alt="...">
+              <p class="card-text"> WIN odds are 50% </p>
+
+            </div>
+          </div>
+        </div>  
+
+    </div>
+    <div>
+      
+
+    </div>
+
+    
+    {% endblock %}
