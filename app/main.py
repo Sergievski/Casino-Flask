@@ -31,7 +31,7 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER # UPLOAD CONFIG
 @app.route("/")
 def home ():
     if cursor.execute("SELECT * FROM casino").fetchone() is None:
-        cursor.execute("INSERT INTO casino VALUES ('Dragon', 'You always win', 1000000)") 
+        cursor.execute("INSERT INTO casino VALUES ('South Park Casino', 'You always win', 1000000)") 
         db.commit()
     return render_template ("home.html")
 
